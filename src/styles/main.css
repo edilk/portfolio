@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    height: 64px;
+    background-color: #00BF63;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-bar {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.nav-bar h1 {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+  
+#logo {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+  
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    font-size: 20px;
+    border: 1px solid #00BF63;
+    box-sizing: border-box;
+}
+
+nav a:hover {
+    padding: 6px 20px;
+    border: 1px solid white;
+    border-radius: 12px;
+    box-sizing: content-box;
+}
+
+header .nav-btn {
+    padding: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+    }
+
+    header nav {
+        position: fixed;
+        top: 9px;
+        right: 4%;
+        padding-top: 9px;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 19px;
+        background-color: #00BF63;
+        transition: 500ms;
+        transform: translateY(-100vh);
+    }
+
+    header .responsive_nav {
+        transform: none;
+    }
+
+    nav .nav-btn-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    nav a:hover {
+        color: sandybrown;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        font-size: 20px;
+    }
+}
