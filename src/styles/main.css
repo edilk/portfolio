@@ -10,10 +10,11 @@ body {
 }
 
 header {
-    height: 64px;
-    background-color: #00BF63;
+    height: 60px;
+    background-color: #023C40; /* #FED766 */
     position: fixed;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .nav-bar {
@@ -24,10 +25,11 @@ header {
     margin: 0 auto;
 }
 
-.nav-bar h1 {
+.nav-bar span {
     display: flex;
     align-items: center;
     padding-left: 20px;
+    font-size: 20px;
 }
   
 #logo {
@@ -44,14 +46,13 @@ nav a {
     text-decoration: none;
     color: white;
     padding: 0 20px;
+    font-family: serif;
     font-size: 20px;
-    border: 1px solid #00BF63;
     box-sizing: border-box;
 }
 
 nav a:hover {
     padding: 6px 20px;
-    border: 1px solid white;
     border-radius: 12px;
     box-sizing: content-box;
 }
@@ -81,14 +82,14 @@ header .nav-btn {
         top: 9px;
         right: 4%;
         padding-top: 9px;
-        height: 200px;
+        height: 180px;
         width: 200px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         flex-direction: column;
         gap: 19px;
-        background-color: #00BF63;
+        background-color: #023C40;
         transition: 500ms;
         transform: translateY(-100vh);
     }
@@ -104,10 +105,45 @@ header .nav-btn {
     }
 
     nav a:hover {
-        color: sandybrown;
         border: none;
         padding: 0;
         border-radius: 0;
         font-size: 20px;
     }
+}
+
+main {
+    min-height: calc(100vh - 60px);
+    padding-top: 60px;
+}
+
+footer {
+    background-color: #023C40;
+    min-height: 60px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 16px;
+}
+
+footer hr {
+    width: 90%;
+    height: 1px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 12px;
+    color: white;
+    font-family: serif;
 }
