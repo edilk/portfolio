@@ -14,7 +14,6 @@ export default function Footer() {
                 <a href="https://www.facebook.com/edil.kamchybekov/" target="_blank" rel="noopener noreferrer"><FacebookIcon /></a>
                 <a href="https://twitter.com/EKamchybekov" target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
             </div>
-            <hr />
             <div className='copyright'>
                 <span>&copy; 2023 - Edil Kamchybekov</span>
             </div>

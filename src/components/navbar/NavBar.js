@@ -15,10 +15,11 @@ export function NavBar() {
             <div className="nav-bar">
                 <span><NavLink to={'/'} id="logo">Edil Kamchybekov</NavLink></span>
                 <nav ref={navRef}>
-                    <NavLink to={'about'}>About</NavLink>
-                    <NavLink to={'projects'}>Projects</NavLink>
-                    <NavLink to={'skills'}>Skills</NavLink>
-                    <NavLink to={'contact'}>Contact</NavLink>
+                    <NavLink to={'/'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Home</NavLink>
+                    <NavLink to={'about'} className={({isActive}) => isActive ? 'active-link' : 'not'}>About</NavLink>
+                    <NavLink to={'projects'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Projects</NavLink>
+                    <NavLink to={'skills'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Skills</NavLink>
+                    <NavLink to={'contact'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Contact</NavLink>
                     <button onClick={showNavBar} className="nav-btn nav-btn-close">
                         <FaTimes/>
                     </button>
