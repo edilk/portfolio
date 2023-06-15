@@ -1,33 +1,79 @@
-import { useRef } from 'react';
-import {FaBars, FaTimes} from 'react-icons/fa';
-import '../../styles/main.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import './navbar.css';
+import { useEffect, useState } from "react";
 
 export function NavBar() {
 
-    const navRef = useRef();
+    const [toggleMenu, setToggleMenu] = useState(true);
 
-    function showNavBar() {
-        navRef.current.classList.toggle("responsive_nav");
+    function handleClick() {
+        setToggleMenu(!toggleMenu)
     }
+
+    useEffect(() => {
+        const header = document.querySelector('header');
+
+        function handleScroll() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            
+            if (scrollTop > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <header>
-            <div className="nav-bar">
-                <span><NavLink to={'/'} id="logo">Edil Kamchybekov</NavLink></span>
-                <nav ref={navRef}>
-                    <NavLink to={'/'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Home</NavLink>
-                    <NavLink to={'about'} className={({isActive}) => isActive ? 'active-link' : 'not'}>About</NavLink>
-                    <NavLink to={'projects'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Projects</NavLink>
-                    <NavLink to={'skills'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Skills</NavLink>
-                    <NavLink to={'contact'} className={({isActive}) => isActive ? 'active-link' : 'not'}>Contact</NavLink>
-                    <button onClick={showNavBar} className="nav-btn nav-btn-close">
-                        <FaTimes/>
+            <div className="navbar">
+                <div className="logo">
+                    <span>E</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span>L</span>
+                </div>
+                <div className={`navigation ${toggleMenu ? "" : "active"}`}>
+                    <ul>
+                        <li>
+                            <NavLink 
+                                to={'/'} 
+                                className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'about'} className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                                About
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'projects'} className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                                Projects
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'contact'} className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                                Contact
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+                <div className="menu">
+                    <button onClick={handleClick}>
+                        {
+                            toggleMenu ? <FaBars className="menu-btn"/> : <FaTimes className="close-btn" />
+                        }
                     </button>
-                </nav>
-                <button onClick={showNavBar} className="nav-btn nav-btn-menu">
-                    <FaBars/>
-                </button>
+                </div>
             </div>
         </header>
-        );
+    );
 }
