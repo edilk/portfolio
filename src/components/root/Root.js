@@ -1,4 +1,5 @@
 
+import About from "../about/About";
 import Home from "../home/Home";
 import { NavBar } from "../navbar/NavBar";
 
@@ -8,6 +9,7 @@ export default function Root() {
             <NavBar />
             <main>
                 <Home />
+                <About />
             </main>
         </>
     );
