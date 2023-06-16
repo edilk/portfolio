@@ -6,11 +6,11 @@ export default function Footer() {
         <footer>
             <section>
                 <ul>
-                    <li><a href='https://github.com/edilk/'><FaGithub /></a></li>
-                    <li><a href='https://www.linkedin.com/in/edil-kamchybekov-bb8526234/'><FaLinkedinIn /></a></li>
-                    <li><a href='https://twitter.com/EKamchybekov'><FaTwitter /></a></li>
-                    <li><a href='https://www.instagram.com/kamchybekov28/'><FaInstagram /></a></li>
-                    <li><a href='https://www.facebook.com/edil.kamchybekov'><FaFacebook /></a></li>
+                    <li><a href='https://github.com/edilk/' rel='noreferrer' target='_blank'><FaGithub /></a></li>
+                    <li><a href='https://www.linkedin.com/in/edil-kamchybekov-bb8526234/' rel='noreferrer' target='_blank'><FaLinkedinIn /></a></li>
+                    <li><a href='https://twitter.com/EKamchybekov' rel='noreferrer' target='_blank'><FaTwitter /></a></li>
+                    <li><a href='https://www.instagram.com/kamchybekov28/' rel='noreferrer' target='_blank'><FaInstagram /></a></li>
+                    <li><a href='https://www.facebook.com/edil.kamchybekov' rel='noreferrer' target='_blank'><FaFacebook /></a></li>
                 </ul>
                 <hr />
                 <p>&copy; 2023 - Edil Kamchybekov</p>
