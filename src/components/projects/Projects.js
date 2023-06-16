@@ -1,7 +1,36 @@
+import { FaCss3Alt, FaGithub, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
+import './projects.css';
+
 export default function Projects() {
     return (
-        <div className="projects">
-            <h1>Projects page</h1>
-        </div>
+        <section className="projects">
+            <h2>Projects</h2>
+            <div className="project-content">
+                <div className="project-item" id='portfolio'>
+                    <h4>My Personal Portfolio</h4>
+                    <p>Technologies</p>
+                    <ul>
+                        <li><FaJs /></li>
+                        <li><FaHtml5 /></li>
+                        <li><FaCss3Alt /></li>
+                        <li><FaReact /></li>
+                        <li><FaGithub /></li>
+                    </ul>
+                    <button><a href='https://vermillion-treacle-655897.netlify.app/'>Visit site</a></button>
+                </div>
+                <div className="project-item" id='spotify'>
+                    <h4>Spotify App for adding song to playlist</h4>
+                    <p>Technologies</p>
+                    <ul>
+                        <li><FaJs /></li>
+                        <li><FaHtml5 /></li>
+                        <li><FaCss3Alt /></li>
+                        <li><FaReact /></li>
+                        <li><FaGithub /></li>
+                    </ul>
+                    <button>Visit site</button>
+                </div>
+            </div>
+        </section>
     );
 }
