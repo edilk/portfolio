@@ -4,6 +4,9 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from 'reac
 export default function Footer() {
     return (
         <footer>
+            <div className='contruction'>
+                <h3>Under construction</h3>
+            </div>
             <section>
                 <ul>
                     <li><a href='https://github.com/edilk/' rel='noreferrer' target='_blank'><FaGithub /></a></li>
