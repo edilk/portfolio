@@ -16,7 +16,7 @@ export default function Projects() {
                         <li><FaReact /></li>
                         <li><FaGithub /></li>
                     </ul>
-                    <button><a href='https://vermillion-treacle-655897.netlify.app/'>Visit site</a></button>
+                    <button><a href='https://edil.netlify.app/'>Visit site</a></button>
                 </div>
                 <div className="project-item" id='spotify'>
                     <h4>Spotify App for adding song to playlist</h4>

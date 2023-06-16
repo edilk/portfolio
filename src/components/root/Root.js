@@ -1,9 +1,9 @@
-
+import Footer from '../footer/Footer';
 import About from "../about/About";
 import Home from "../home/Home";
 import { NavBar } from "../navbar/NavBar";
 import Projects from "../projects/Projects";
-import Contacts from '../contacts/Contacts'
+import Contact from '../contacts/Contact'
 
 export default function Root() {
     return (
@@ -13,8 +13,9 @@ export default function Root() {
                 <Home />
                 <About />
                 <Projects />
-                <Contacts />
+                <Contact />
             </main>
+            <Footer />
         </>
     );
 }

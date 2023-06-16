@@ -1,0 +1,11 @@
+footer {
+    width: 100vw;
+    height: 350px;
+    background-color: #171717;
+}
+
+@media (min-width: 768px) {
+    footer {
+        height: 320px;
+    }
+}
