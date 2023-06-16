@@ -84,6 +84,7 @@ export default function About() {
                 }
                 </ul>
             </div>
+            <hr />
         </section>
     );
 }

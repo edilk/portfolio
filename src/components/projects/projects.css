@@ -1,6 +1,6 @@
 .projects {
     width: min(90vw, 1024px);
-    margin: 30px 0 -250px;
+    margin: 20px 0 -250px;
 }
 
 .project-content {
@@ -97,5 +97,5 @@
 }
 
 @media (max-width: 769px) {
-    
+
 }

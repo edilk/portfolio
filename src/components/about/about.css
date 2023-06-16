@@ -20,7 +20,12 @@ h3 {
 
 .about {
     width: min(90vw, 1024px);
-    margin: 80px auto;
+    margin-top: 80px;
+}
+
+.about hr {
+    border-color: #ffa500;
+    width: 100%;
 }
 
 .about-content {
