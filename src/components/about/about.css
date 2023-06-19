@@ -102,6 +102,17 @@ h3 {
     font-size: 1.2rem;
 }
 
+@media (max-width: 425px) {
+    .about-text {
+        padding: 20px 0 20px 0;
+    }
+
+    .skills ul {
+        padding: 0;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     .about {
