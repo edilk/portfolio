@@ -1,10 +1,9 @@
 .contact {
-    position: relative;
-    top: 300px;
     width: min(90vw, 1024px);
     background-color: #ffa500;
     height: 350px;
-    margin: 30px 0 100px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
 }
 
@@ -128,14 +127,10 @@ textarea:focus {
     }
 }
 
-
-
-
-
 @media (min-width: 768px) {
 
     .contact {
-        top: 270px;
+        top: 0;
         height: 340px;
     }
 
@@ -147,7 +142,7 @@ textarea:focus {
     }
 
     .contact-input input {
-        height: 32px;
+        height: 36px;
     }
 
     textarea {

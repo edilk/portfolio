@@ -4,7 +4,6 @@ import './about.css';
 import { FaJs, FaReact, FaJava, FaCss3Alt, FaHtml5, FaGitAlt, FaGithub } from "react-icons/fa";
 import {GrMysql} from 'react-icons/gr';
 import { SiRedux } from 'react-icons/si';
-import { Link } from "react-router-dom";
 
 export default function About() {
 
@@ -47,7 +46,7 @@ export default function About() {
         }
     ]
     return (
-        <section className="about">
+        <section className="about" id="about">
             <h2>About me</h2>
             <div className="about-content">
                 <div className="about-image">
@@ -65,7 +64,7 @@ export default function About() {
                     <p>
                     Feel free to explore my portfolio and projects to get a better idea 
                     of my work. If you have any questions or would like to collaborate, 
-                    don't hesitate to <Link to="/contact">reach out</Link>. I look forward to connecting with you! 
+                    don't hesitate to <a href="#contact">reach out</a>. I look forward to connecting with you! 
                     Thank you for visiting my page!</p>
                 </div>
             </div>

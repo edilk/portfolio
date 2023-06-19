@@ -3,7 +3,7 @@ import banner  from "../../images/banner.png"
 
 export default function Home() {
     return (
-        <section className='home'>
+        <section className='home' id='home'>
             <div className='home-content'>
                 <div className='home-text'>
                     <h1>Welcome!</h1>

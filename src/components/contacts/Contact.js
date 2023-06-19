@@ -55,7 +55,7 @@ export default function Contact() {
     }, [isSuccessfull])
 
     return (
-        <section className="contact">
+        <section className="contact" id='contact'>
             <h2>Contact me</h2>
             {showResultMsg && (
                 <div className={isSuccessfull ? 'success' : 'fail'}>

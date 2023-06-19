@@ -1,6 +1,5 @@
 footer {
     width: 100vw;
-    height: 350px;
     background-color: #171717;
 }
 
@@ -10,8 +9,8 @@ footer section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 20px;
     align-items: center;
-    padding-top: 220px;
 }
 
 hr {
@@ -22,6 +21,7 @@ hr {
 
 footer p {
     padding-top: 18px;
+    padding-bottom: 20px;
     color: #fff;
 }
 
@@ -60,7 +60,4 @@ footer a:hover {
 }
 
 @media (min-width: 768px) {
-    footer {
-        height: 320px;
-    }
 }

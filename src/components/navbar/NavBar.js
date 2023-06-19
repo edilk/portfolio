@@ -1,11 +1,15 @@
-import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import './navbar.css';
 import { useEffect, useState } from "react";
 
-export function NavBar() {
+export default function NavBar() {
 
     const [toggleMenu, setToggleMenu] = useState(true);
+    const [activeLink, setActiveLink] = useState('home');
+
+	function handleLinkClick(link) {
+		setActiveLink(link);
+	}
 
     function handleClick() {
         setToggleMenu(!toggleMenu)
@@ -31,6 +35,35 @@ export function NavBar() {
         };
     }, []);
 
+    // useEffect(() => {
+    //     function handleScroll() {
+
+    //         const home = document.getElementById('home');
+    //         const about = document.getElementById('about');
+    //         const projects = document.getElementById('projects');
+    //         const contact = document.getElementById('contact');
+
+    //         const scrollPosition = window.scrollY;
+
+    //         if ( scrollPosition >= home.offsetTop &&
+    //             scrollPosition < about.offsetTop) {
+    //             setActiveLink('home');  
+    //         } else if (scrollPosition >= about.offsetTop &&
+    //             scrollPosition < projects.offsetTop) {
+    //             setActiveLink('about');
+    //         } else if (scrollPosition >= projects.offsetTop &&
+    //             scrollPosition < contact.offsetTop) {
+    //             setActiveLink('projects');
+    //         } else if (scrollPosition >= contact.offsetTop) {
+    //             setActiveLink('contact');
+    //         }
+    //     };
+
+    //     window.addEventListener('scroll', handleScroll);
+
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
+
     return (
         <header>
             <div className="navbar">
@@ -43,26 +76,36 @@ export function NavBar() {
                 <div className={`navigation ${toggleMenu ? "" : "active"}`}>
                     <ul>
                         <li>
-                            <NavLink 
-                                to={'/'} 
-                                className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                            <a 
+                                href={'#home'} 
+                                className={ activeLink === 'home' ? 'navbar-link navlink-active' : 'navbar-link'}
+                                onClick={() => handleLinkClick('home')}>
                                 Home
-                            </NavLink>
+                            </a>
                         </li>
                         <li>
-                            <NavLink to={'about'} className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                            <a 
+                                href={'#about'} 
+                                className={activeLink === 'about' ? 'navbar-link navlink-active' : 'navbar-link'}
+                                onClick={() => handleLinkClick('about')}>
                                 About
-                            </NavLink>
+                            </a>
                         </li>
                         <li>
-                            <NavLink to={'projects'} className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                            <a 
+                                href={'#projects'} 
+                                className={activeLink === 'projects' ? 'navbar-link navlink-active' : 'navbar-link'}
+                                onClick={() => handleLinkClick('projects')}>
                                 Projects
-                            </NavLink>
+                            </a>
                         </li>
                         <li>
-                            <NavLink to={'contact'} className={({isActive}) => isActive ? 'navbar-link navlink-active' : 'navbar-link'}>
+                            <a 
+                                href={'#contact'} 
+                                className={activeLink === 'contact' ? 'navbar-link navlink-active' : 'navbar-link'}
+                                onClick={() => handleLinkClick('contact')}>
                                 Contact
-                            </NavLink>
+                            </a>
                         </li>
                     </ul>
                 </div>
